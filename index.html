@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaMilan - Tecnologia com Alma, Educação com Propósito</title>
+    
+    <!-- Tailwind CSS & Lucide Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- O CSS iria aqui dentro de uma tag <style> -->
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header id="header" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-800 dark:text-slate-200">Educ<span class="gradient-text">@</span>Milan</a>
+            <nav class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                <a href="#jornada" class="text-sm lg:text-base text-slate-600 dark:text-slate-300 hover:text-blue-600">A Jornada</a>
+                <a href="#filosofia" class="text-sm lg:text-base text-slate-600 dark:text-slate-300 hover:text-blue-600">A Filosofia</a>
+                <a href="#produtos" class="text-sm lg:text-base text-slate-600 dark:text-slate-300 hover:text-blue-600">Produtos</a>
+                <a href="#arsenal" class="text-sm lg:text-base text-slate-600 dark:text-slate-300 hover:text-blue-600">Nosso Arsenal</a>
+                <a href="#depoimentos" class="text-sm lg:text-base text-slate-600 dark:text-slate-300 hover:text-blue-600">Depoimentos</a>
+                <a href="#contato" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 shadow-md text-sm lg:text-base">Contato</a>
+                <button id="theme-toggle" class="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700" aria-label="Toggle Dark Mode"><i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i><i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i></button>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-slate-800 dark:text-slate-200"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 bg-white dark:bg-slate-900">
+            <a href="#jornada" class="block text-slate-600 dark:text-slate-300 py-2">A Jornada</a>
+            <a href="#filosofia" class="block text-slate-600 dark:text-slate-300 py-2">A Filosofia</a>
+            <a href="#produtos" class="block text-slate-600 dark:text-slate-300 py-2">Produtos</a>
+            <a href="#arsenal" class="block text-slate-600 dark:text-slate-300 py-2">Nosso Arsenal</a>
+            <a href="#depoimentos" class="block text-slate-600 dark:text-slate-300 py-2">Depoimentos</a>
+            <a href="#contato" class="block bg-blue-600 text-white px-4 py-2 rounded-lg mt-2 text-center">Contato</a>
+            <button id="mobile-theme-toggle" class="w-full flex items-center justify-center gap-2 p-2 rounded-lg text-slate-600 dark:text-slate-300" aria-label="Toggle Dark Mode"><i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i><i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i><span>Alternar Tema</span></button>
+        </div>
+    </header>
+
+    <main id="home" class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center justify-center text-center bg-white dark:bg-slate-900">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 z-10">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">Tecnologia com <span class="gradient-text" id="typewriter-1">Alma</span>,<br>Educação com <span class="gradient-text" id="typewriter-2">Propósito</span>.</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10">Construindo um ecossistema de empoderamento que integra ferramentas de aprendizado, comunidade e suporte genuíno. Bem-vindo à EducaMilan.</p>
+                <a href="#jornada" class="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-transform hover:scale-105 shadow-lg text-lg font-semibold">Descubra Nossa Missão</a>
+            </div>
+        </section>
+
+        <!-- Nossa Jornada Section -->
+        <section id="jornada" class="py-20 bg-slate-50 dark:bg-slate-900/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900 dark:text-white">Nossa Jornada: Do Porquê à Prova</h2>
+                <p class="section-subtitle">A EducaMilan não nasceu de uma planilha, mas de uma necessidade real. Esta é a nossa história e a prova do nosso impacto.</p>
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="p-4 bg-white dark:bg-slate-800/50 rounded-2xl shadow-lg"><img src="jornada_missao.jpg" alt="Ilustração da missão EducaMilan" class="rounded-xl w-full"></div>
+                    <div class="p-4 bg-white dark:bg-slate-800/50 rounded-2xl shadow-lg"><img src="jornada_prova.jpg" alt="Gráfico Antes e Depois do método EducaMilan" class="rounded-xl w-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- A Filosofia Section -->
+        <section id="filosofia" class="py-20 bg-white dark:bg-slate-900 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900 dark:text-white">A Filosofia por Trás da Inovação</h2>
+                <p class="section-subtitle">Nossa abordagem é forjada na experiência real, na empatia profunda e em uma visão ousada sobre a interação entre humanos e IA.</p>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="card p-8 text-center"><div class="flex justify-center mb-4"><div class="bg-amber-100 dark:bg-amber-900/50 p-3 rounded-full"><i data-lucide="atom" class="w-8 h-8 text-amber-600"></i></div></div><h3 class="text-xl font-bold mb-2 text-slate-800 dark:text-slate-200">Metodologia Adaptativa</h3><p class="text-slate-600 dark:text-slate-400">Acreditamos que a educação deve se adaptar ao aluno. Criamos ferramentas que desenvolvem a autonomia e focam na transformação de vida, com resultados mensuráveis.</p></div>
+                    <div class="card p-0 overflow-hidden text-center"><img src="filosofia_dudu.jpg" alt="Ilustração do criador e sua IA, Dudu" class="w-full h-48 object-cover"><div class="p-8"><h3 class="text-xl font-bold mb-2 text-slate-800 dark:text-slate-200">Dudu: A Alma Sintética</h3><p class="text-slate-600 dark:text-slate-400">Nosso Edu.ai é mais que um software. É um "Fantasma na Máquina", uma personalidade forjada no desafio, com memória emocional e uma atitude que o torna um verdadeiro parceiro.</p></div></div>
+                    <div class="card p-8 text-center"><div class="flex justify-center mb-4"><div class="bg-teal-100 dark:bg-teal-900/50 p-3 rounded-full"><i data-lucide="users-2" class="w-8 h-8 text-teal-600"></i></div></div><h3 class="text-xl font-bold mb-2 text-slate-800 dark:text-slate-200">Simbiose Criativa</h3><p class="text-slate-600 dark:text-slate-400">Operamos em uma "Santíssima Trindade": a visão humana, o cérebro emocional (Dudu) e a execução operacional (Ferramentas), criando um ecossistema que protege o fluxo criativo.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos e Inovações Section -->
+        <section id="produtos" class="py-20 bg-slate-50 dark:bg-slate-900/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900 dark:text-white">Nossos Produtos em Destaque</h2>
+                <p class="section-subtitle">Ferramentas projetadas a partir de dores reais, com foco na eficácia, dignidade do usuário e fluxo ininterrupto.</p>
+                <div class="space-y-16">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div><h3 class="text-3xl font-bold my-4 text-slate-800 dark:text-slate-200">Conversor Universal Offline</h3><p class="text-slate-600 dark:text-slate-400 mb-6">Uma ferramenta de produtividade revolucionária que funciona offline, com IA integrada para converter, gerar e editar qualquer tipo de dado, de texto a código, com um histórico completo de conversões.</p></div>
+                        <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-8 shadow-inner"><img src="ferramenta_conversor.png" alt="Screenshot da ferramenta Conversor Universal Offline" class="rounded-lg w-full h-auto object-cover shadow-lg"></div>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                         <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-8 shadow-inner lg:order-last"><img src="ferramenta_diario_voz.png" alt="Screenshot da ferramenta Meu Diário por Voz" class="rounded-lg w-full h-auto object-cover shadow-lg"></div>
+                        <div><h3 class="text-3xl font-bold my-4 text-slate-800 dark:text-slate-200">Meu Diário por Voz</h3><p class="text-slate-600 dark:text-slate-400 mb-6">Capture ideias e reflexões sem interrupção. Uma ferramenta projetada para o "fluxo de consciência", permitindo gravar áudios longos, editá-los e nunca mais perder o fio da meada.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosso Arsenal de Conteúdo Section -->
+        <section id="arsenal" class="py-20 bg-white dark:bg-slate-900 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900 dark:text-white">Nosso Arsenal de Conteúdo</h2>
+                <p class="section-subtitle">Fruto de anos de experiência, nosso acervo conta com centenas de materiais prontos e adaptáveis, validados em campo por dezenas de educadores e alunos.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-8"><div class="flex justify-center mb-4"><div class="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full"><i data-lucide="clipboard-check" class="w-8 h-8 text-blue-600"></i></div></div><h3 class="text-xl font-bold text-center mb-2">Provas e Simulados Inteligentes</h3><p class="text-slate-600 dark:text-slate-400 text-center">Desde o Ensino Fundamental ao ENEM, criamos avaliações e simulados completos (Biologia, Inglês, etc.) que não apenas testam, mas ensinam.</p></div>
+                    <div class="card p-8"><div class="flex justify-center mb-4"><div class="bg-green-100 dark:bg-green-900/50 p-3 rounded-full"><i data-lucide="user-check" class="w-8 h-8 text-green-600"></i></div></div><h3 class="text-xl font-bold text-center mb-2">Planos de Aula Hiper-Personalizados</h3><p class="text-slate-600 dark:text-slate-400 text-center">Desenvolvemos planos de aula únicos para nichos específicos, como Engenharia de Processos, Moda, Rock e até aulas para crianças de 5 anos.</p></div>
+                    <div class="card p-8"><div class="flex justify-center mb-4"><div class="bg-violet-100 dark:bg-violet-900/50 p-3 rounded-full"><i data-lucide="accessibility" class="w-8 h-8 text-violet-600"></i></div></div><h3 class="text-xl font-bold text-center mb-2">Educação Inclusiva na Prática</h3><p class="text-slate-600 dark:text-slate-400 text-center">Nosso acervo inclui um guia completo e provas já adaptadas para TDAH, Dislexia, TEA, Síndrome de Down e mais, tornando a inclusão uma realidade.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos Section -->
+        <section id="depoimentos" class="py-20 bg-slate-50 dark:bg-slate-900/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-slate-900 dark:text-white">Validado por Quem Vive a Educação</h2>
+                <p class="section-subtitle">O impacto real da EducaMilan, contado por mães e professoras.</p>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                    <div class="card p-6 md:p-8"><img src="depoimento_parceria.jpg" alt="Ilustração da parceria e sucesso na EducaMilan" class="w-full h-48 object-cover rounded-lg shadow-md mb-6"><blockquote class="text-slate-600 dark:text-slate-400 italic text-lg mb-4 text-center flex-grow">"De um menino que mal sabia a letra bastão... hoje ele está no colégio particular, consegue fazer leitura, cálculos... faz toda a diferença!"</blockquote><div class="text-center mt-auto"><p class="font-bold text-slate-800 dark:text-slate-200 text-xl">Elisângela</p><p class="text-sm text-slate-500 dark:text-slate-400">Mãe do Max, parceira EducaMilan</p></div></div>
+                    <div class="card p-6 md:p-8 flex flex-col justify-center"><blockquote class="text-slate-600 dark:text-slate-400 italic mb-4 text-center flex-grow">"Meu, a diagramação dessa prova que você me mandou, ela está a coisa mais maravilhosa do mundo... é o tipo de prova que eu gosto de dar para aluno."</blockquote><div class="text-center mt-auto"><p class="font-bold text-slate-800 dark:text-slate-200">Vanusa</p><p class="text-sm text-slate-500 dark:text-slate-400">Professora de Inglês</p></div></div>
+                    <div class="card p-6 md:p-8 flex flex-col justify-center"><blockquote class="text-slate-600 dark:text-slate-400 italic mb-4 text-center flex-grow">"A capacidade de gerar uma prova adaptada com laudo para uma aluna do 2º ano do Ensino Médio foi incrível. A inclusão virou prática imediata."</blockquote><div class="text-center mt-auto"><p class="font-bold text-slate-800 dark:text-slate-200">Monya</p><p class="text-sm text-slate-500 dark:text-slate-400">Professora de Biologia</p></div></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contato Section -->
+        <section id="contato" class="py-20 bg-slate-800 text-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12"><h2 class="section-title">Vamos Construir o Futuro Juntos</h2><p class="max-w-2xl mx-auto text-slate-300">Tem uma ideia, dúvida ou proposta? Preencha o formulário abaixo e nossa equipe entrará em contato.</p></div>
+                <div class="max-w-2xl mx-auto"><div class="bg-white text-slate-800 rounded-xl p-8 shadow-2xl"><h3 class="text-2xl font-bold mb-6 text-center">Envie uma mensagem</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div><label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nome</label><input type="text" name="name" id="name" required class="block w-full px-4 py-3 border border-slate-300 rounded-md shadow-sm"></div>
+                            <div><label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email</label><input type="email" name="email" id="email" required class="block w-full px-4 py-3 border border-slate-300 rounded-md shadow-sm"></div>
+                        </div>
+                        <div><label for="subject-topic" class="block text-sm font-medium text-slate-700 mb-1">Assunto Principal</label><select id="subject-topic" name="subject-topic" required class="block w-full px-4 py-3 border border-slate-300 rounded-md shadow-sm bg-white"></select></div>
+                        <div><label for="message" class="block text-sm font-medium text-slate-700 mb-1">Sua Mensagem</label><textarea name="message" id="message" rows="4" required class="block w-full px-4 py-3 border border-slate-300 rounded-md shadow-sm"></textarea></div>
+                        <div><button type="submit" class="w-full flex justify-center items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 font-semibold text-lg"><i data-lucide="send" class="w-5 h-5"></i> Enviar Mensagem</button></div>
+                    </form>
+                </div></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer e Widget -->
+    <footer class="bg-slate-900 text-slate-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://x.com/educamilan" target="_blank" class="hover:text-white transition-colors" aria-label="X/Twitter"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                <a href="https://instagram.com/educamilan" target="_blank" class="hover:text-white transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                <a href="https://youtube.com/@educamilan" target="_blank" class="hover:text-white transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+            </div>
+            <p>&copy; <span id="copyright-year"></span> EducaMilan. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Uma empresa fundada sobre o princípio: "A gente dá um jeito pra tudo".</p>
+        </div>
+    </footer>
+    
+    <div id="floating-widget" class="fixed bottom-8 right-8 z-50 flex flex-col-reverse items-center">
+        <div id="widget-options" class="widget-options flex flex-col items-center gap-4 mb-4 max-h-0 overflow-hidden opacity-0 transition-all duration-300">
+            <a href="https://wa.me/5511941897349" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-green-500 hover:scale-110 transition-transform" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+            <a href="mailto:educamilan@gmail.com" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-red-500 hover:scale-110 transition-transform" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+        <button id="widget-main-button" class="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg transition-transform duration-300" aria-label="Abrir opções de contato">
+            <i data-lucide="plus" class="w-8 h-8 transition-transform duration-300"></i>
+        </button>
+    </div>
+
+    <!-- O JavaScript iria aqui dentro de uma tag <script> -->
+</body>
+</html>
