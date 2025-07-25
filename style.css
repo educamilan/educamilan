@@ -1,171 +1,94 @@
-        /* Custom styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-            color: #1e293b; /* slate-800 */
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #3b82f6, #16a34a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .section-title {
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 800;
-            line-height: 1.2;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .section-subtitle {
-            font-size: 1.125rem; /* text-lg */
-            text-align: center;
-            color: #475569; /* slate-600 */
-            max-width: 48rem; /* max-w-3xl */
-            margin: 0 auto 3rem auto;
-        }
-        .card {
-            background-color: white;
-            border-radius: 0.75rem; /* rounded-xl */
-            padding: 2rem;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        .tag {
-            display: inline-block;
-            background-color: #e0e7ff; /* indigo-100 */
-            color: #3730a3; /* indigo-800 */
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px; /* rounded-full */
-            font-weight: 600;
-            font-size: 0.75rem; /* text-xs */
-            text-transform: uppercase;
-        }
-        
-        /* New Service Card Styles */
-        .service-card {
-            background-color: white;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-            border: 1px solid #e5e7eb;
-        }
-        .service-card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            border-color: #3b82f6;
-        }
-        
-        /* Modal Styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .modal-overlay.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 1rem;
-            max-width: 90%;
-            width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
-        .modal-overlay.visible .modal-container {
-            transform: scale(1);
-        }
+/* Definição de Variáveis de Cor para Temas Claro e Escuro */
+:root {
+    --bg-light: #f8fafc;
+    --text-light: #1e293b;
+    --bg-dark: #0f172a;
+    --text-dark: #e2e8f0;
+    --card-bg-light: white;
+    --card-bg-dark: #1e293b;
+}
 
-        /* Floating Contact Widget */
-        .floating-widget {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 50;
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-        }
-        .widget-main-button {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #3b82f6;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-        .floating-widget:hover .widget-main-button {
-            transform: scale(1.1);
-            background-color: #2563eb;
-        }
-        .widget-options {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out, opacity 0.4s ease;
-            opacity: 0;
-        }
-        .floating-widget:hover .widget-options {
-            max-height: 300px; /* Adjust as needed */
-            opacity: 1;
-        }
-        .widget-option {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: transform 0.2s ease;
-        }
-        .widget-option:hover {
-            transform: scale(1.15);
-        }
-        
-        /* Loading Spinner */
-        .loader {
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #3498db;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+/* Estilos Globais do Corpo da Página */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos do Corpo no Modo Escuro */
+.dark body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Classe Utilitária para Texto em Gradiente */
+.gradient-text {
+    background: linear-gradient(to right, #3b82f6, #16a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos Padrão para Títulos de Seção (Usando diretivas @apply do Tailwind) */
+.section-title {
+    @apply text-4xl md:text-5xl font-extrabold leading-tight text-center mb-4;
+}
+
+/* Estilos Padrão para Subtítulos de Seção */
+.section-subtitle {
+    @apply text-lg text-center text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12;
+}
+
+/* Estilos Base para Componente "Card" */
+.card {
+    background-color: var(--card-bg-light);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos do Card no Modo Escuro */
+.dark .card {
+    background-color: var(--card-bg-dark);
+    border: 1px solid #334155; /* Cor slate-700 */
+}
+
+/* Efeito Hover para o Card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Animação de Entrada para Seções */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeito de Cursor de Máquina de Escrever */
+.typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.1em;
+    background-color: #3b82f6; /* Cor blue-600 */
+    animation: blink 0.7s infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
