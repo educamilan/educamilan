@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EducaMilan - Tecnologia com Alma, Educação com Propósito</title>
+    
+    <!-- Tailwind CSS (Framework de Estilo) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons (Ícones) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Nosso CSS Personalizado -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
@@ -11,7 +24,7 @@
     <!-- Header / Navigation -->
     <header id="header" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-slate-800 dark:text-slate-200">Educ<span class="gradient-text">@</span>Milan</a>
+            <a href="index.html" class="text-2xl font-bold text-slate-800 dark:text-slate-200">Educ<span class="gradient-text">@</span>Milan</a>
             <nav class="hidden md:flex items-center space-x-4 lg:space-x-6">
                 <a href="#jornada" class="text-sm lg:text-base text-slate-600 dark:text-slate-300 hover:text-blue-600">A Jornada</a>
                 <a href="#filosofia" class="text-sm lg:text-base text-slate-600 dark:text-slate-300 hover:text-blue-600">A Filosofia</a>
@@ -78,8 +91,8 @@
                 <p class="section-subtitle">Ferramentas projetadas a partir de dores reais, com foco na eficácia, dignidade do usuário e fluxo ininterrupto.</p>
                 <div class="space-y-16">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div><h3 class="text-3xl font-bold my-4 text-slate-800 dark:text-slate-200">Conversor Universal Offline</h3><p class="text-slate-600 dark:text-slate-400 mb-6">Uma ferramenta de produtividade revolucionária que funciona offline, com IA integrada para converter, gerar e editar qualquer tipo de dado, de texto a código, com um histórico completo de conversões.</p></div>
-                        <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-8 shadow-inner"><img src="ferramenta_conversor.png" alt="Screenshot da ferramenta Conversor Universal Offline" class="rounded-lg w-full h-auto object-cover shadow-lg"></div>
+                        <div><h3 class="text-3xl font-bold my-4 text-slate-800 dark:text-slate-200">EducaMilan Drills</h3><p class="text-slate-600 dark:text-slate-400 mb-6">Domine a pronúncia com nosso protótipo interativo. O EducaMilan Drills oferece um ambiente focado e sem distrações para você praticar sua fala, ouvir a pronúncia correta e conquistar a fluência.</p></div>
+                        <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-8 shadow-inner"><img src="produto_drills.png" alt="Screenshot do protótipo EducaMilan Drills" class="rounded-lg w-full h-auto object-cover shadow-lg"></div>
                     </div>
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                          <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-8 shadow-inner lg:order-last"><img src="ferramenta_diario_voz.png" alt="Screenshot da ferramenta Meu Diário por Voz" class="rounded-lg w-full h-auto object-cover shadow-lg"></div>
@@ -142,48 +155,22 @@
                 <a href="https://instagram.com/educamilan" target="_blank" class="hover:text-white transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-6 h-6"></i></a>
                 <a href="https://youtube.com/@educamilan" target="_blank" class="hover:text-white transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-6 h-6"></i></a>
             </div>
-            <p>&copy; <span id="copyright-year"></span> EducaMilan. Todos os direitos reservados.</p>
+            <p>© <span id="copyright-year"></span> EducaMilan. Todos os direitos reservados.</p>
             <p class="text-sm mt-2">Uma empresa fundada sobre o princípio: "A gente dá um jeito pra tudo".</p>
         </div>
     </footer>
     
-<div id="floating-widget" class="fixed bottom-8 right-8 z-50 flex flex-col-reverse items-center">
-    <!-- Opções -->
-    <div id="widget-options" class="widget-options flex flex-col items-center gap-4 mb-4 overflow-hidden transition-all duration-300 max-h-96">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/5511941897349" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-green-500 hover:scale-110 transition-transform" aria-label="WhatsApp">
-            <i data-lucide="message-circle"></i>
-        </a>
-
-        <!-- Email -->
-        <a href="mailto:educamilan@gmail.com" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-red-500 hover:scale-110 transition-transform" aria-label="Email">
-            <i data-lucide="mail"></i>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/educamilan" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-pink-500 hover:scale-110 transition-transform" aria-label="Instagram">
-            <i data-lucide="instagram"></i>
-        </a>
-
-        <!-- Telegram -->
-        <a href="https://t.me/educamilan" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-blue-400 hover:scale-110 transition-transform" aria-label="Telegram">
-            <i data-lucide="send"></i>
-        </a>
-
-        <!-- X / Twitter -->
-        <a href="https://x.com/educamilan" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-black hover:scale-110 transition-transform" aria-label="X (Twitter)">
-            <i data-lucide="twitter"></i>
-        </a>
+    <div id="floating-widget" class="fixed bottom-8 right-8 z-50 flex flex-col-reverse items-center">
+        <div id="widget-options" class="widget-options flex flex-col items-center gap-4 mb-4 max-h-0 overflow-hidden opacity-0 transition-all duration-300">
+            <a href="https://wa.me/5511941897349" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-green-500 hover:scale-110 transition-transform" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+            <a href="mailto:educamilan@gmail.com" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-red-500 hover:scale-110 transition-transform" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+        <button id="widget-main-button" class="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg transition-transform duration-300" aria-label="Abrir opções de contato">
+            <i data-lucide="plus" class="w-8 h-8 transition-transform duration-300"></i>
+        </button>
     </div>
 
-    <!-- Botão principal -->
-    <button id="widget-main-button" class="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg transition-transform duration-300 open" aria-label="Abrir opções de contato">
-        <i data-lucide="plus" class="w-8 h-8 transition-transform duration-300 rotate-45"></i>
-    </button>
-</div>
-
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Nosso JavaScript -->
     <script src="script.js"></script>
-    </body>
+</body>
 </html>
