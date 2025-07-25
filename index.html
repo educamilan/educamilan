@@ -147,15 +147,41 @@
         </div>
     </footer>
     
-    <div id="floating-widget" class="fixed bottom-8 right-8 z-50 flex flex-col-reverse items-center">
-        <div id="widget-options" class="widget-options flex flex-col items-center gap-4 mb-4 max-h-0 overflow-hidden opacity-0 transition-all duration-300">
-            <a href="https://wa.me/5511941897349" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-green-500 hover:scale-110 transition-transform" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
-            <a href="mailto:educamilan@gmail.com" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-red-500 hover:scale-110 transition-transform" aria-label="Email"><i data-lucide="mail"></i></a>
-        </div>
-        <button id="widget-main-button" class="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg transition-transform duration-300" aria-label="Abrir opções de contato">
-            <i data-lucide="plus" class="w-8 h-8 transition-transform duration-300"></i>
-        </button>
+<div id="floating-widget" class="fixed bottom-8 right-8 z-50 flex flex-col-reverse items-center">
+    <!-- Opções -->
+    <div id="widget-options" class="widget-options flex flex-col items-center gap-4 mb-4 overflow-hidden transition-all duration-300 max-h-96">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5511941897349" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-green-500 hover:scale-110 transition-transform" aria-label="WhatsApp">
+            <i data-lucide="message-circle"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:educamilan@gmail.com" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-red-500 hover:scale-110 transition-transform" aria-label="Email">
+            <i data-lucide="mail"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/educamilan" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-pink-500 hover:scale-110 transition-transform" aria-label="Instagram">
+            <i data-lucide="instagram"></i>
+        </a>
+
+        <!-- Telegram -->
+        <a href="https://t.me/educamilan" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-blue-400 hover:scale-110 transition-transform" aria-label="Telegram">
+            <i data-lucide="send"></i>
+        </a>
+
+        <!-- X / Twitter -->
+        <a href="https://x.com/educamilan" target="_blank" class="w-12 h-12 rounded-full text-white flex items-center justify-center shadow-md bg-black hover:scale-110 transition-transform" aria-label="X (Twitter)">
+            <i data-lucide="twitter"></i>
+        </a>
     </div>
+
+    <!-- Botão principal -->
+    <button id="widget-main-button" class="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg transition-transform duration-300 open" aria-label="Abrir opções de contato">
+        <i data-lucide="plus" class="w-8 h-8 transition-transform duration-300 rotate-45"></i>
+    </button>
+</div>
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
